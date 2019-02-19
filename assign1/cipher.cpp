@@ -1,16 +1,31 @@
 #include <string>
+#include <bits/stdc++.h>
 
-std::string TwoDig(std::string input)
+int CharToNum(char input)
 {
-    return std::string() + input[1] + input[0];
+    return input - '0';
 }
 
-std::string ThreeDig(std::string input)
+char NumToChar(int input)
 {
-    return "";
+    return (char)(input + '0');
+}
+
+std::string TwoThreeDig(std::string input)
+{
+    std::reverse(input.begin(), input.end());
+    return input;
 }
 
 std::string FourDig(std::string input)
 {
-    return "";
+    for (int i = input.length() - 1; i >= 0; i--)
+    {
+        int temp = CharToNum(input[i]);
+        temp += input.length() - i;
+        temp %= 10;
+        input[i] = NumToChar(temp);
+    }
+
+    return input;
 }

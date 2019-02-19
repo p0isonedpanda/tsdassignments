@@ -22,11 +22,8 @@ int main()
     switch(output.length())
     {
         case 2:
-            output = TwoDig(output);
-            break;
-
         case 3:
-            std::cout << "length 3" << std::endl;
+            output = TwoThreeDig(output);
             break;
 
         case 4:
@@ -34,7 +31,7 @@ int main()
         case 6:
         case 7:
         case 8:
-            std::cout << "length >=4" << std::endl;
+            output = FourDig(output);
             break;
 
         default:
