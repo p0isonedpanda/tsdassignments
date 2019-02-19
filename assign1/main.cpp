@@ -1,20 +1,19 @@
 #include <iostream>
 #include <string>
-#include "utility.h"
 
 int main()
 {
     int input;
-    string output;
+    std::string output;
 
     // take user input
-    cout << "enter a number: ";
-    cin >> input;
+    std::cout << "enter a number: ";
+    std::cin >> input;
 
     // exit with error if non numeric input
-    if (cin.fail())
+    if (std::cin.fail())
     {
-        cout << "invalid input" << endl;
+        std::cout << "invalid input" << std::endl;
         return 1;
     }
 
@@ -22,11 +21,11 @@ int main()
     switch(output.length())
     {
         case 2:
-            cout << "length 2" << endl;
+            std::cout << "length 2" << std::endl;
             break;
 
         case 3:
-            cout << "length 3" << endl;
+            std::cout << "length 3" << std::endl;
             break;
 
         case 4:
@@ -34,11 +33,11 @@ int main()
         case 6:
         case 7:
         case 8:
-            cout << "length >=4" << endl;
+            std::cout << "length >=4" << std::endl;
             break;
 
         default:
-            cout << "invalid length of number" << endl;
+            std::cout << "invalid length of number" << std::endl;
             return 1;
     }
 
