@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "cipher.h"
 
 int main()
 {
@@ -21,7 +22,7 @@ int main()
     switch(output.length())
     {
         case 2:
-            std::cout << "length 2" << std::endl;
+            output = TwoDig(output);
             break;
 
         case 3:
@@ -40,6 +41,8 @@ int main()
             std::cout << "invalid length of number" << std::endl;
             return 1;
     }
+    
+    std::cout << output << std::endl;
 
     return 0;
 }
