@@ -1,5 +1,6 @@
 #include <string>
 #include <bits/stdc++.h>
+#include "cipher.h"
 
 int CharToNum(char input)
 {
@@ -28,4 +29,12 @@ std::string FourDig(std::string input)
     }
 
     return input;
+}
+
+std::string EightDig(std::string input)
+{
+    std::string output = FourDig(input);
+    std::reverse(output.begin(), output.end());
+
+    return output;
 }

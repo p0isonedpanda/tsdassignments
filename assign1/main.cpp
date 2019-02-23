@@ -18,6 +18,9 @@ int main()
         return 1;
     }
 
+    // clear cin buffer for next input
+    std::cin.ignore();
+
     output = std::to_string(input);
     switch(output.length())
     {
@@ -30,8 +33,28 @@ int main()
         case 5:
         case 6:
         case 7:
-        case 8:
             output = FourDig(output);
+            break;
+
+        case 8:
+            {
+                // we need to ask the user if they want extra protection or not
+                std::string choice;
+
+                std::cout << "would you like extra protection? [y/n]: ";
+                getline(std::cin, choice);
+
+                // should only ever enter this loop if the user does not enter y or n
+                while (!(choice == "y" || choice == "n"))
+                {
+                    std::cout << "please enter a valid choice";
+                    getline(std::cin, choice);
+                }
+            
+                if (choice == "y") output = EightDig(output);
+                else output = FourDig(output);
+            }
+
             break;
 
         default:
