@@ -44,8 +44,9 @@ std::string DecFourDig(std::string input)
     for (int i = input.length() - 1; i >= 0; i--)
     {
         int temp = CharToNum(input[i]);
-        // reverse the modulus shit somehow
+        temp += 10; // this essentially undoes the modulus operation for us
         temp -= input.length() - i;
+        temp %= 10; // this will then just make sure its not >= 10
         input[i] = NumToChar(temp);
     }
 
@@ -55,7 +56,5 @@ std::string DecFourDig(std::string input)
 std::string DecEightDig(std::string input)
 {
     std::reverse(input.begin(), input.end());
-    std::string output = FourDig(input);
-
-    return output;
+    return DecFourDig(input);
 }
