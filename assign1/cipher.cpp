@@ -38,3 +38,24 @@ std::string EightDig(std::string input)
 
     return output;
 }
+
+std::string DecFourDig(std::string input)
+{
+    for (int i = input.length() - 1; i >= 0; i--)
+    {
+        int temp = CharToNum(input[i]);
+        // reverse the modulus shit somehow
+        temp -= input.length() - i;
+        input[i] = NumToChar(temp);
+    }
+
+    return input;
+}
+
+std::string DecEightDig(std::string input)
+{
+    std::reverse(input.begin(), input.end());
+    std::string output = FourDig(input);
+
+    return output;
+}
