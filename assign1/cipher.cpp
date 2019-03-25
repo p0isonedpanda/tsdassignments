@@ -1,3 +1,14 @@
+/*
+ * TSD Assignment 1
+ * Author: Daniel Coady
+ * Student Number: 102084174
+ *
+ * File: cipher.cpp
+ * This file contains all the functions required for the main program to operate
+ * as intended. All functions in here relate to the actual encoding and
+ * decoding of messages.
+ */
+
 #include <string>
 #include <bits/stdc++.h>
 #include "cipher.h"

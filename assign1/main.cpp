@@ -1,3 +1,12 @@
+/*
+ * TSD Assignment 1
+ * Author: Daniel Coady
+ * Student Number: 102084174
+ *
+ * File: main.cpp
+ * This file dictates the main flow of the program
+ */
+
 #include <iostream>
 #include <string>
 #include "cipher.h"

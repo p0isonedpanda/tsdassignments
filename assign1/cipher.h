@@ -1,3 +1,12 @@
+/*
+ * TSD Assignment 1
+ * Author: Daniel Coady
+ * Student Number: 102084174
+ *
+ * File: cipher.h
+ * Header file to declare all functions in cipher.cpp
+ */
+
 #pragma once
 
 // used to encode unencrypted numbers
